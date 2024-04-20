@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 7f19f7bc93b91ca498e43f2dfbe0329b
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -682116235354238907
+    second: Cone.007|Cone.003|Cone.003|Cone.003Action
+  - first:
+      74: 7721606671389958212
+    second: Cone.007|Cone.007|Cone.005|Cone.005Action
+  - first:
+      74: 1987667283610870115
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.003Action
+  - first:
+      74: -5627310266418059939
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.003|Cone.003|Cone.003A
+  - first:
+      74: -8645885578337800418
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005Action
+  - first:
+      74: -6124116797278422706
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005Action.001
+  - first:
+      74: -476110737165021947
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone.
+  - first:
+      74: 1294724133221259412
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone..001
+  - first:
+      74: -59251768777855078
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone..002
+  - first:
+      74: 4844058052087146062
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone.003A
+  - first:
+      74: -1623654016419358923
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005A
+  - first:
+      74: 3753451110198634066
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.005|Cone.005|Cone.006A
+  - first:
+      74: -3785938040190780263
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006Action
+  - first:
+      74: -7680892751329997119
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006Action.001
+  - first:
+      74: -8199709169340436197
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006Action.002
+  - first:
+      74: -4433401180855142783
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone.
+  - first:
+      74: 1483966659821829274
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone..001
+  - first:
+      74: 7763530202299943568
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone..002
+  - first:
+      74: -2055909246607442763
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone.003A
+  - first:
+      74: -4775679261838859374
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone.005A
+  - first:
+      74: -3164109480807381910
+    second: Cone.007|Cone.007|Cone.005|Cone.005|Cone.005|Cone.006|Cone.006|Cone.006A
+  - first:
+      74: 6392585686576736411
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.003Action
+  - first:
+      74: 7186854411942850565
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.003|Cone.003|Cone.003A
+  - first:
+      74: 896049391803238437
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005Action
+  - first:
+      74: -8657227858886286564
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005Action.001
+  - first:
+      74: -8864172394429597706
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone.
+  - first:
+      74: 451338650648652811
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone..001
+  - first:
+      74: 3307467911905384596
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone..002
+  - first:
+      74: -2688193824691763018
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone.003A
+  - first:
+      74: -1274200434710347606
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone.005A
+  - first:
+      74: 4866545197070644776
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.005|Cone.005|Cone.006A
+  - first:
+      74: -3072448181391724010
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006Action
+  - first:
+      74: 6905022939303121907
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006Action.001
+  - first:
+      74: -6830316972746947365
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006Action.002
+  - first:
+      74: 6821984322273153471
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone.
+  - first:
+      74: -8158833230627507962
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone..001
+  - first:
+      74: -4908897079531248008
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone..002
+  - first:
+      74: -8969049161543739958
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone.003A
+  - first:
+      74: -6884116118683609543
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone.005A
+  - first:
+      74: 8618347279924226858
+    second: Cone.007|Cone.007|Cone.005|Cone.006|Cone.006|Cone.006|Cone.006|Cone.006A
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: f127489cd02d3a44d87c6b6c6f249bba, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
