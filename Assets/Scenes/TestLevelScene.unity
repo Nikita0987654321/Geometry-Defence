@@ -885,6 +885,7 @@ MonoBehaviour:
   _cardSO:
   - {fileID: 11400000, guid: d76a0dc7fb6b1474ea09133e4256e74c, type: 2}
   - {fileID: 11400000, guid: 8862fd7765010cc419e1b72075411e12, type: 2}
+  - {fileID: 11400000, guid: 94ea52193d46f9b43892a5fa3163d5ef, type: 2}
   _plantedCards: []
 --- !u!1 &971999966
 GameObject:
