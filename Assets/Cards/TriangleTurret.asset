@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bff1ea84bf64c844b9bc9d8fdd28f46a, type: 3}
-  m_Name: Sphere
+  m_Name: TriangleTurret
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   prefab: {fileID: 5289727577268939501, guid: 57d91d0d20a92994ba77b73a4cf548f0, type: 3}

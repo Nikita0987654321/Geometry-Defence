@@ -7,19 +7,20 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    public float damage = 10;
+    private float damage = 10;
+    public GameObject turret;
     private void Start()
     {
+        damage = turret.GetComponent<GunCard>().Damage;
         Invoke("DestroyFireball", lifeTime);
     }
     void FixedUpdate()
     {
         MovedFixedUpdate();
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        EnemyDamage(collision);
-        DestroyFireball();
+        EnemyDamage(other);
     }
     public void MovedFixedUpdate()
     {
@@ -30,15 +31,15 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void EnemyDamage(Collision collision)
+    private void EnemyDamage(Collider other)
     {
-        var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+        var enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
+            DestroyFireball();
             enemyHealth.health -= damage;
             if (enemyHealth.health <= 0)
             {
-                
                 Destroy(enemyHealth.gameObject);
             }
         }

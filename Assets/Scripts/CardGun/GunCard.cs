@@ -48,6 +48,7 @@ public class GunCard : MonoBehaviour
         for (int i = 0; i < bulletSpawnPosition.Length; i++)
         {
             Instantiate(bulletPrefab, bulletSpawnPosition[i].position, bulletSpawnPosition[i].rotation);
+            bulletPrefab.GetComponent<Bullet>().turret = gameObject;
         }
     }
 }
