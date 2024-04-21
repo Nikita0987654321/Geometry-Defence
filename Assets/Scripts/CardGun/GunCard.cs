@@ -27,7 +27,7 @@ public class GunCard : MonoBehaviour
                     if (hit.collider.gameObject.CompareTag("Enemy"))
                     {
                         canShoot = true;
-                        break; // Если нашли хотя бы одно попадание во врага, выходим из цикла
+                        break;
                     }
                 }
             }
