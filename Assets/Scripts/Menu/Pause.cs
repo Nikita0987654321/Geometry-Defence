@@ -10,6 +10,10 @@ public class Pause : MonoBehaviour
     float _scaledTime;
     float _unscaledTime;
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,12 +40,5 @@ public class Pause : MonoBehaviour
         _pausePanel.SetActive(false);
         Time.timeScale = 1;
         _isPaused = false;
-    }
-
-    public void MainMenuButton()
-    {
-        Time.timeScale = 1;
-        _isPaused = false;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
