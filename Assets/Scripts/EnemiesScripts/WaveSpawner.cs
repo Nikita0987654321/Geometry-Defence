@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -40,8 +39,12 @@ public class WaveSpawner : MonoBehaviour
 
     public void LaunchWave()
     {
-        StartCoroutine(SpawnEnemyInWave());
+        if(this != null) // Проверка на существование объекта
+        {
+            StartCoroutine(SpawnEnemyInWave());
+        }
     }
+
 }
 
 [System.Serializable]

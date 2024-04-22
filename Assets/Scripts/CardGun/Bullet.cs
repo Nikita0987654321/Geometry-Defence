@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
@@ -9,23 +6,33 @@ public class Bullet : MonoBehaviour
     public float lifeTime;
     private float damage = 10;
     public GameObject turret;
+
     private void Start()
     {
-        damage = turret.GetComponent<GunCard>().Damage;
         Invoke("DestroyFireball", lifeTime);
     }
+
     void FixedUpdate()
     {
         MovedFixedUpdate();
     }
+
     private void OnTriggerEnter(Collider other)
     {
         EnemyDamage(other);
     }
+
     public void MovedFixedUpdate()
     {
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
     }
+
+    public void SetTurret(GameObject newTurret)
+    {
+        turret = newTurret;
+        damage = turret.GetComponent<GunCard>().Damage;
+    }
+
     private void DestroyFireball()
     {
         Destroy(gameObject);

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -30,7 +29,7 @@ public class EnemyController : MonoBehaviour
     }
     private IEnumerator AttackBuilding()
     {
-        if (_targetBuilding.health > 0 && _targetBuilding._renderer.material.color == _targetBuilding.colorMaterial)
+        while (_targetBuilding != null && _targetBuilding.health > 0 && _targetBuilding._renderer.material.color == _targetBuilding.colorMaterial)
         {
             speed = 0;
             yield return new WaitForSeconds(1);
@@ -38,13 +37,10 @@ public class EnemyController : MonoBehaviour
             {
                 _targetBuilding.TakeDamage(damage);
             }
-            StartCoroutine(AttackBuilding());
         }
-        else
-        {
-            _targetBuilding = null;
-            speed = originalSpeed;
-        }
+
+        _targetBuilding = null;
+        speed = originalSpeed;
     }
     public void EnemyMove()
     {
