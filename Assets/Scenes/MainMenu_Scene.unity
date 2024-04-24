@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fonImage: {fileID: 1242867406}
   _speed: 2
-  _currentPosition: 960
+  _currentPosition: 0
 --- !u!4 &831149865
 Transform:
   m_ObjectHideFlags: 0
@@ -1387,7 +1387,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 101
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
