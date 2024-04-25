@@ -10,7 +10,7 @@ public class GunCard : MonoBehaviour
     public Building color;
     public Bullet bulletPrefab;
     public Transform[] bulletSpawnPosition;
-    private void Update()
+    private void FixedUpdate()
     {
         ShotFind();
     }
@@ -31,10 +31,9 @@ public class GunCard : MonoBehaviour
                     }
                 }
             }
-
             if (canShoot)
             {
-                timer += Time.deltaTime;
+                timer += Time.fixedDeltaTime;
                 if (timer >= interval)
                 {
                     timer = 0f;

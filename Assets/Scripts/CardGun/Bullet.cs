@@ -5,7 +5,8 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float lifeTime;
     private float damage = 10;
-    public GameObject turret;
+    public ParticleSystem boom;
+    private GameObject turret;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class Bullet : MonoBehaviour
 
     private void DestroyFireball()
     {
+        Instantiate(boom, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

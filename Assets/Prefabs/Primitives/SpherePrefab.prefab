@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169783301606cce459f19f4d45767658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 100
+  Damage: 10
   interval: 1
   color: {fileID: 3822221945741463884}
   bulletPrefab: {fileID: 5117835069759049814, guid: 10f2d3a4ab392d448b2a2e56cfc53839,

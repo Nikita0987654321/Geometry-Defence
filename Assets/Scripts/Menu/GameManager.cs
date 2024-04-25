@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _currentPosition = 960f;
     private void Start()
     {
+        Time.timeScale = 1;
         _currentPosition = 960f;
     }
     private void Update()

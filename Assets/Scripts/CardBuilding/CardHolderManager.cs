@@ -34,11 +34,7 @@ public class CardHolderManager : MonoBehaviour
         cardManager.CardSO = _cardSO[i];
 
         _plantedCards[i] = card;
-
-        _icon = _cardSO[i].icon;
         _cost = _cardSO[i].cost;
-
-        card.GetComponentInChildren<SpriteRenderer>().sprite = _icon;
         card.GetComponentInChildren<TMP_Text>().text = _cost.ToString();
     }
 }

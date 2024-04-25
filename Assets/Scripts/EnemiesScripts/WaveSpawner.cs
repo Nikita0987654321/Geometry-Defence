@@ -5,16 +5,15 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Waves[] _waves;
     public Transform[] spawnPoints;
+    public GameObject youWin;
     private int _currentEnemyIndex;
     private int _currentWaveIndex;
     private int _enemiesLeftToSpawn;
-
     private void Start()
     {
         _enemiesLeftToSpawn = _waves[0].WaveSettings.Length;
         LaunchWave();
     }
-
     private IEnumerator SpawnEnemyInWave()
     {
         if(_enemiesLeftToSpawn > 0)
@@ -36,24 +35,20 @@ public class WaveSpawner : MonoBehaviour
             }
         }
     }
-
     public void LaunchWave()
     {
-        if(this != null) // Проверка на существование объекта
+        if(this != null)
         {
             StartCoroutine(SpawnEnemyInWave());
         }
     }
-
 }
-
 [System.Serializable]
 public class Waves 
 {
     [SerializeField] private WaveSettings[] _waveSettings;
     public WaveSettings[] WaveSettings { get => _waveSettings; }
 }
-
 [System.Serializable]
 public class WaveSettings
 {
