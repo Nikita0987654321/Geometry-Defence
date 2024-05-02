@@ -33,6 +33,15 @@ public class WaveSpawner : MonoBehaviour
                 _enemiesLeftToSpawn = _waves[_currentWaveIndex].WaveSettings.Length;
                 _currentEnemyIndex = 0;
             }
+            else
+            {
+                var enemiesLeft = 0;
+                enemiesLeft = GameObject.FindGameObjectsWithTag("Enemy").Length;
+                if (enemiesLeft == 0)
+                {
+                    youWin.SetActive(true);
+                }
+            }
         }
     }
     public void LaunchWave()

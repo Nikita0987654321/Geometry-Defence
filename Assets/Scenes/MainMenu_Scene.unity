@@ -486,7 +486,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 61904130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 831149864}
+        m_MethodName: LVL5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &61904130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +616,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75116981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 831149864}
+        m_MethodName: LVL4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75116981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +678,7 @@ GameObject:
   - component: {fileID: 195129584}
   - component: {fileID: 195129583}
   m_Layer: 5
-  m_Name: LVL 6
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,7 +746,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195129584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 831149864}
+        m_MethodName: BOSS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195129584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,6 +1191,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527294034}
   m_CullTransparentMesh: 0
+--- !u!114 &615441929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 48235087601328504, guid: 769a7975b1497cf4caee3bd552903900,
+    type: 3}
+  m_PrefabInstance: {fileID: 825848222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285ec821be7fa90428d8115e8414d27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &758218475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1336,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758218475}
   m_CullTransparentMesh: 0
+--- !u!1001 &825848222
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080633, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155833110774080639, guid: 769a7975b1497cf4caee3bd552903900,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 769a7975b1497cf4caee3bd552903900, type: 3}
 --- !u!1 &831149863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,7 +1615,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893596722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 831149864}
+        m_MethodName: LVL2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893596722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +2205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you shure?
+  m_text: Are you sure?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -2454,7 +2579,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1224223598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 615441929}
+        m_MethodName: LoadCurrentLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1224223598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,7 +3459,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1458668836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 831149864}
+        m_MethodName: LVL3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1458668836
 MonoBehaviour:
   m_ObjectHideFlags: 0

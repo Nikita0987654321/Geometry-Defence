@@ -31,7 +31,27 @@ public class GameManager : MonoBehaviour
     }
     public void LVL1()
     {
-        _currentPosition = 960f;
-        SceneManager.LoadScene("01_Level_Scene");
+        SceneManager.LoadScene(1);
+    }
+
+    public void LVL2()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void LVL3()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void LVL4()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void LVL5()
+    {
+        SceneManager.LoadScene(5);
+    }
+    public void BOSS()
+    {
+        SceneManager.LoadScene(6);
     }
 }

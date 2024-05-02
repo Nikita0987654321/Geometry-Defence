@@ -16,6 +16,7 @@ public class Building : MonoBehaviour
     private void Start()
     {
         colorMaterial = _renderer.material.color;
+        GetComponent<Collider>().enabled = false;
     }
 
     public void SetColor(bool isAvailableToBuild)
@@ -67,6 +68,7 @@ public class Building : MonoBehaviour
             {
                 childRenderer.material.color = colorMaterial;
             }
+            GetComponent<Collider>().enabled = true;
             ResetColorRecursive(child);
         }
     }
