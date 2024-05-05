@@ -16,7 +16,7 @@ public class GunCard : MonoBehaviour
     }
     private void ShotFind()
     {
-        if (color._renderer.material.color == color.colorMaterial)
+        if (color._renderer.material.color == color.colorMaterial)  
         {
             bool canShoot = false;
             RaycastHit hit;

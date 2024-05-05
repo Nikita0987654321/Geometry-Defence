@@ -49,7 +49,7 @@ MonoBehaviour:
   _buildingSize: {x: 2, y: 2}
   _renderer: {fileID: 1911030025592510298}
   colorMaterial: {r: 0, g: 0, b: 0, a: 0}
-  health: 1000
+  health: 200
 --- !u!54 &63150490620467661
 Rigidbody:
   m_ObjectHideFlags: 0

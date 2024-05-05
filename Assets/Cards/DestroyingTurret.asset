@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bff1ea84bf64c844b9bc9d8fdd28f46a, type: 3}
-  m_Name: Wall
+  m_Name: DestroyingTurret
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7968433912193841180, guid: e905bb3868804f24697e554dc5dede69, type: 3}
-  cost: 10
+  prefab: {fileID: 625170057500782137, guid: 7e9d62d3a500498419d90614b58ede5f, type: 3}
+  cost: 1

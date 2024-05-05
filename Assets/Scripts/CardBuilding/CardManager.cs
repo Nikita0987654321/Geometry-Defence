@@ -8,7 +8,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
     public Card CardSO
     {
         get => _cardSO;
-        set { _cardSO = value; }
+        set => _cardSO = value;
     }
 
     private GameObject _draggingBuilding;
@@ -20,12 +20,10 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
     private GridController _gridController;
 
-    public bool isBuild = false;
-
     private void Awake()
     {
         _gridController = FindObjectOfType<GridController>();
-        if (_gridController != null)
+        if (_gridController != null || ValueCounter.value >= _cardSO.cost)
         {
             _gridController.Grid = new Building[_gridSize.x, _gridSize.y];
         }
@@ -67,20 +65,23 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _draggingBuilding = Instantiate(_cardSO.prefab, Vector3.zero, Quaternion.identity);
-
-        _building = _draggingBuilding.GetComponent<Building>();
-
-        var groundPlane = new Plane(Vector3.up, Vector3.zero);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (groundPlane.Raycast(ray, out float pos))
+        if (ValueCounter.value >= _cardSO.cost)
         {
-            Vector3 worldPosition = ray.GetPoint(pos);
-            int x = Mathf.RoundToInt(worldPosition.x);
-            int z = Mathf.RoundToInt(worldPosition.z);
+            _draggingBuilding = Instantiate(_cardSO.prefab, Vector3.zero, Quaternion.identity);
+            
+            _building = _draggingBuilding.GetComponent<Building>();
+            
+            var groundPlane = new Plane(Vector3.up, Vector3.zero);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            _draggingBuilding.transform.position = new Vector3(x, 0, z);
+            if (groundPlane.Raycast(ray, out float pos))
+            {
+                Vector3 worldPosition = ray.GetPoint(pos);
+                int x = Mathf.RoundToInt(worldPosition.x);
+                int z = Mathf.RoundToInt(worldPosition.z);
+
+                _draggingBuilding.transform.position = new Vector3(x, 0, z);
+            }
         }
     }
 
@@ -99,9 +100,9 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
             Destroy(_draggingBuilding);
         else
         {
-            isBuild = true;
             _gridController.Grid[(int)_draggingBuilding.transform.position.x, (int)_draggingBuilding.transform.position.z] = _building;
             _building.ResetColor();
+            ValueCounter.value -= _cardSO.cost;
         }
     }
 

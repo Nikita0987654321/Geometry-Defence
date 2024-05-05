@@ -4912,4 +4912,3 @@ MonoBehaviour:
   speed: 10
   lifeTime: 3
   boom: {fileID: 7000447726105055618, guid: ac811804713c31846a66500c9fd43332, type: 3}
-  turret: {fileID: 0}

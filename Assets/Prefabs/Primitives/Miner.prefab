@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6368610990566048272}
   - component: {fileID: 2996001178649696482}
   m_Layer: 0
-  m_Name: CubePrefab
+  m_Name: Miner
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,6 +200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Concept\u21162"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196029542541527941, guid: 7f19f7bc93b91ca498e43f2dfbe0329b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f19f7bc93b91ca498e43f2dfbe0329b, type: 3}
