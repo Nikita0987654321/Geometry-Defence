@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b798739cb1949004f80ef73b8426d6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseAmount: 1
+  increaseAmount: 5
   interval: 5
   color: {fileID: 9007418125070469653}
 --- !u!54 &-6368610990566048272

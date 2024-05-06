@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DestroyingTurret
   m_EditorClassIdentifier: 
   prefab: {fileID: 625170057500782137, guid: 7e9d62d3a500498419d90614b58ede5f, type: 3}
-  cost: 1
+  cost: 5

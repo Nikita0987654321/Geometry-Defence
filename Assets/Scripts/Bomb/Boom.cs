@@ -1,32 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-
 public class Boom : MonoBehaviour
-
 {
-    public float radius = 5f; // Радиус области вокруг бомбы, в котором будут уничтожаться объекты
-    public float timing = 5f;
-    void Start()
+    public AudioSource collisionSound;
+    public GameObject explosionPrefab;
+    public Transform explosionParticle;
+    public Building color;
+    private void Start()
     {
-        Invoke("Explode", timing); // Вызываем метод Explode через 2 секунды
-    }
-
-    void Explode()
-    {
-        // Получаем все коллайдеры в определенном радиусе вокруг бомбы
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-
-        // Уничтожаем все объекты с тегом "Enemy" в радиусе действия
-        foreach (Collider hit in colliders)
+        if (color._renderer.material.color == color.colorMaterial)
         {
-            if (hit.CompareTag("Enemy"))
-            {
-                Destroy(hit.gameObject);
-            }
+            Invoke("Explosion", 5f);
         }
-
-        // Уничтожаем саму бомбу
+    }
+    private void Explosion()
+    {
+        var explosion = Instantiate(explosionPrefab);
+        explosion.transform.position = transform.position;
+        var explosionPart = Instantiate(explosionParticle);
+        explosionPart.transform.position = transform.position;
         Destroy(gameObject);
     }
 }
