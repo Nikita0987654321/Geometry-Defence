@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 15
   boom: {fileID: 7000447726105055618, guid: ac811804713c31846a66500c9fd43332, type: 3}
+  color: {fileID: 0}
 --- !u!1 &2276604121796681298
 GameObject:
   m_ObjectHideFlags: 0
