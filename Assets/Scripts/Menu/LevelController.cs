@@ -10,7 +10,11 @@ public class LevelController : MonoBehaviour
         PlayerPrefs.SetInt("currentLevel", newSceneIndex);
         SceneManager.LoadScene(newSceneIndex);
     }
-
+    public void Restart()
+    {
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
     public void LoadCurrentLevel()
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");

@@ -9,6 +9,7 @@ public class ValueCounter : MonoBehaviour
     private void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
+        value = 10f;
     }
 
     private void Update()

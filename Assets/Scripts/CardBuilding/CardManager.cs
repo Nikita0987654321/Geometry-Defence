@@ -23,7 +23,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
     private void Awake()
     {
         _gridController = FindObjectOfType<GridController>();
-        if (_gridController != null || ValueCounter.value >= _cardSO.cost)
+        if (_gridController != null)
         {
             _gridController.Grid = new Building[_gridSize.x, _gridSize.y];
         }
@@ -45,7 +45,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
                 int x = Mathf.RoundToInt(worldPosition.x);
                 int z = Mathf.RoundToInt(worldPosition.z);
 
-                if (x < 0 || x > _gridSize.x - _building.BuildingSize.x)
+                if (x < 0 && x > _gridSize.x - _building.BuildingSize.x)
                     _isAvailableToBuild = false;
                 else if (z < 0 || z > _gridSize.y - _building.BuildingSize.y)
                     _isAvailableToBuild = false;
@@ -65,53 +65,63 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (ValueCounter.value >= _cardSO.cost)
+        _draggingBuilding = Instantiate(_cardSO.prefab, Vector3.zero, Quaternion.identity);
+            
+        _building = _draggingBuilding.GetComponent<Building>();
+            
+        var groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (groundPlane.Raycast(ray, out float pos))
         {
-            _draggingBuilding = Instantiate(_cardSO.prefab, Vector3.zero, Quaternion.identity);
-            
-            _building = _draggingBuilding.GetComponent<Building>();
-            
-            var groundPlane = new Plane(Vector3.up, Vector3.zero);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 worldPosition = ray.GetPoint(pos);
+            int x = Mathf.RoundToInt(worldPosition.x);
+            int z = Mathf.RoundToInt(worldPosition.z);
 
-            if (groundPlane.Raycast(ray, out float pos))
-            {
-                Vector3 worldPosition = ray.GetPoint(pos);
-                int x = Mathf.RoundToInt(worldPosition.x);
-                int z = Mathf.RoundToInt(worldPosition.z);
-
-                _draggingBuilding.transform.position = new Vector3(x, 0, z);
-            }
+            _draggingBuilding.transform.position = new Vector3(x, 0, z);
         }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (_gridController == null)
+        if (ValueCounter.value >= _cardSO.cost)
         {
-            return;
-        }
-        if (_draggingBuilding == null)
-        {
-            return;
-        }
+            if (_gridController == null)
+            {
+                return;
+            }
+            if (_draggingBuilding == null)
+            {
+                return;
+            }
 
-        if (!_isAvailableToBuild)
-            Destroy(_draggingBuilding);
+            if (!_isAvailableToBuild)
+                Destroy(_draggingBuilding);
+            else
+            {
+                _gridController.Grid[(int)_draggingBuilding.transform.position.x, (int)_draggingBuilding.transform.position.z] = _building;
+                _building.ResetColor();
+                ValueCounter.value -= _cardSO.cost;
+            }
+        }
         else
         {
-            _gridController.Grid[(int)_draggingBuilding.transform.position.x, (int)_draggingBuilding.transform.position.z] = _building;
-            _building.ResetColor();
-            ValueCounter.value -= _cardSO.cost;
+            Destroy(_draggingBuilding);
         }
     }
 
     private bool IsPlaceTaken(int x, int y)
     {
+        if (x < 0 || x >= _gridSize.x || y < 0 || y >= _gridSize.y)
+        {
+            return true; // Возвращаем true, если координаты находятся за пределами массива
+        }
+
         if (_gridController.Grid[x, y] != null)
         {
-            return true;
+            return true; // Возвращаем true, если место занято
         }
-        return false;
+
+        return false; // Возвращаем false, если место свободно
     }
 }
