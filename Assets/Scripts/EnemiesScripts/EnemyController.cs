@@ -7,7 +7,6 @@ public class EnemyController : MonoBehaviour
     private float speed;
     public float damage = 5;
     private Building _targetBuilding;
-    private Base _thisBase;
     void Start()
     {
         RotateEnemy();
@@ -21,16 +20,9 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Building"))
         {
             Building building = other.GetComponent<Building>();
-            Base _base = other.GetComponent<Base>();
             if (building != null)
             {
                 _targetBuilding = building;
-                StartCoroutine(AttackBuilding());
-            }
-
-            if (_base != null)
-            {
-                _thisBase = _base;
                 StartCoroutine(AttackBuilding());
             }
         }
@@ -45,14 +37,7 @@ public class EnemyController : MonoBehaviour
             {
                 _targetBuilding.TakeDamage(damage);
             }
-
-            if (_thisBase != null)
-            {
-                _thisBase.TakeDamage(damage);
-            }
         }
-
-        _thisBase = null;
         _targetBuilding = null;
         speed = originalSpeed;
     }

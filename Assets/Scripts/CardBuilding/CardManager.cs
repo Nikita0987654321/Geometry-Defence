@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
@@ -16,8 +14,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
     private Vector2Int _gridSize = new Vector2Int(15, 10);
     private bool _isAvailableToBuild;
-
-
+    
     private GridController _gridController;
 
     private void Awake()
@@ -49,7 +46,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
                     _isAvailableToBuild = false;
                 else if (z < 0 || z > _gridSize.y - _building.BuildingSize.y)
                     _isAvailableToBuild = false;
-                else
+                else if(ValueCounter.value >= _cardSO.cost)
                     _isAvailableToBuild = true;
 
                 if (_isAvailableToBuild && IsPlaceTaken(x, z)) _isAvailableToBuild = false;
@@ -109,19 +106,18 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
             Destroy(_draggingBuilding);
         }
     }
-
     private bool IsPlaceTaken(int x, int y)
     {
         if (x < 0 || x >= _gridSize.x || y < 0 || y >= _gridSize.y)
         {
-            return true; // Возвращаем true, если координаты находятся за пределами массива
+            return true;
         }
 
         if (_gridController.Grid[x, y] != null)
         {
-            return true; // Возвращаем true, если место занято
+            return true;
         }
 
-        return false; // Возвращаем false, если место свободно
+        return false;
     }
 }

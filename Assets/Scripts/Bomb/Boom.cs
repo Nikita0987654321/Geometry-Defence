@@ -1,18 +1,36 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+
 public class Boom : MonoBehaviour
 {
     public AudioSource collisionSound;
     public GameObject explosionPrefab;
     public Transform explosionParticle;
     public Building color;
-    private void Start()
+    private bool isBuildingReady = false;
+
+    void Start()
+    {
+        color = GetComponent<Building>();
+        color.SetColor(true); // Устанавливаем цвет заранее
+        isBuildingReady = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (isBuildingReady)
+        {
+            ExplosionFind();
+        }
+    }
+
+    void ExplosionFind()
     {
         if (color._renderer.material.color == color.colorMaterial)
         {
-            Invoke("Explosion", 5f);
+            Explosion();
         }
     }
+
     private void Explosion()
     {
         var explosion = Instantiate(explosionPrefab);

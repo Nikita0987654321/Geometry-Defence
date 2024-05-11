@@ -42,9 +42,15 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
         _isPaused = false;
     }
-
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu_Scene");
+        SceneManager.LoadScene(0);
+    }
+    public void WinMainMenu()
+    {
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        var newSceneIndex = currentSceneIndex + 1;
+        PlayerPrefs.SetInt("currentLevel", newSceneIndex);
+        SceneManager.LoadScene(0);
     }
 }
